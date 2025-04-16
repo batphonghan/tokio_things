@@ -1,0 +1,200 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'tokio_redis'",
+      "cargo": {
+        "args": ["test", "--no-run", "--lib", "--package=tokio_redis"],
+        "filter": {
+          "name": "tokio_redis",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'client'",
+      "cargo": {
+        "args": ["build", "--bin=client", "--package=tokio_redis"],
+        "filter": {
+          "name": "client",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'client'",
+      "cargo": {
+        "args": ["test", "--no-run", "--bin=client", "--package=tokio_redis"],
+        "filter": {
+          "name": "client",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'echo-server-copy'",
+      "cargo": {
+        "args": ["build", "--bin=echo-server-copy", "--package=tokio_redis"],
+        "filter": {
+          "name": "echo-server-copy",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'echo-server-copy'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=echo-server-copy",
+          "--package=tokio_redis"
+        ],
+        "filter": {
+          "name": "echo-server-copy",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'hyper'",
+      "cargo": {
+        "args": ["build", "--bin=hyper", "--package=tokio_redis"],
+        "filter": {
+          "name": "hyper",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'hyper'",
+      "cargo": {
+        "args": ["test", "--no-run", "--bin=hyper", "--package=tokio_redis"],
+        "filter": {
+          "name": "hyper",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'server'",
+      "cargo": {
+        "args": ["build", "--bin=server", "--package=tokio_redis"],
+        "filter": {
+          "name": "server",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'server'",
+      "cargo": {
+        "args": ["test", "--no-run", "--bin=server", "--package=tokio_redis"],
+        "filter": {
+          "name": "server",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'hello-redis'",
+      "cargo": {
+        "args": ["build", "--example=hello-redis", "--package=tokio_redis"],
+        "filter": {
+          "name": "hello-redis",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'hello-redis'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=hello-redis",
+          "--package=tokio_redis"
+        ],
+        "filter": {
+          "name": "hello-redis",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'io'",
+      "cargo": {
+        "args": ["build", "--example=io", "--package=tokio_redis"],
+        "filter": {
+          "name": "io",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'io'",
+      "cargo": {
+        "args": ["test", "--no-run", "--example=io", "--package=tokio_redis"],
+        "filter": {
+          "name": "io",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
