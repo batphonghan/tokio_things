@@ -1,3 +1,4 @@
+use std::error::Error;
 use std::io::{self, Cursor, Read, Write};
 
 #[derive(Debug)]
@@ -11,10 +12,10 @@ impl Data {
     pub fn serialize(&self) -> io::Result<Vec<u8>> {
         let mut bytes = Vec::new();
 
-        bytes.write(&self.field1.to_ne_bytes())?;
-        bytes.write(&self.field2.to_ne_bytes())?;
+        let _ = bytes.write(&self.field1.to_ne_bytes())?;
+        let _ = bytes.write(&self.field2.to_ne_bytes())?;
         let field3_len = self.field3.len() as u32;
-        bytes.write(&field3_len.to_ne_bytes())?;
+        let _ = bytes.write(&field3_len.to_ne_bytes())?;
         bytes.extend_from_slice(self.field3.as_bytes());
 
         Ok(bytes)
